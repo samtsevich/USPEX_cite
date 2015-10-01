@@ -1,0 +1,81 @@
+
+a.spoiler:after {
+content: " open ";}
+
+a.spoiler.collapsed:after{
+content: " hide ";}
+
+table.navbar td a, table.navbar td a.he {
+    display: block;
+    font-size: 10pt;
+    font-weight: 700;
+    height: 35px;
+    padding: 3px 5px;
+    text-align: center;
+    text-decoration: none;
+    width: 38px;
+}
+
+.navbar td a.tmetals:link, .navbar td a.tmetals:visited {
+    background-color: #FFF28E;
+    border: #0f5782 1px solid;
+    color: #000;
+}
+
+.navbar td a.alkalie:link, .navbar td a.alkalie:visited {
+    background-color: #90c7ff;
+    border: #0f5782 1px solid;
+    color: #000;
+}
+
+table.navbar td a, table.navbar td a.he {
+    display: block;
+    font-size: 8pt;
+    font-weight: 700;
+    height: 35px;
+    padding: 3px 5px;
+    text-align: center;
+    text-decoration: none;
+    width: 38px;
+}
+
+td .metalloid {
+    background-color: #c79810;
+}
+
+table.navbar td a.ngases:link, table.navbar td a.ngases:visited {
+    background-color: #e6e6fa;
+    border: #0f5782 1px solid;
+    color: green;
+}
+
+table.navbar td a.onm-gases:link, table.navbar td a.onm-gases:visited {
+    background-color: #f96;
+    border: #0f5782 1px solid;
+    color: green;
+}
+
+.navbar td a.rare:link, .navbar td a.rare:visited {
+    background-color: #FCEFF0;
+    border: #0f5782 1px solid;
+    color: #000;
+}
+
+.navbar td a.alkali:link, .navbar td a.alkali:visited {
+    background-color: #dda0dd;
+    border: #0f5782 1px solid;
+    color: #000;
+}
+
+.navbar td a.tmetals-synthetic:link, .navbar td a.tmetals-synthetic:visited {
+    background-color: #FFF28E;
+    border: #0f5782 1px solid;
+    color: #a52a2a;
+}
+
+table.navbar td {
+    border: 1px solid #FFF;
+    height: 40px;
+    width: 45px;
+}
+
