@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap  Template</title>
+    <title>Skolkovo IW team 20</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -16,7 +16,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
+</head>
   <body>
       <div class="navbar navbar-inverse navbar-static-top">
                 <div class="container">
@@ -143,42 +143,20 @@
 
     <tr>
         <td class="info">Period<br/>1</td>
-        <td><a class="onm-gases"title="hydrogen" id="submit"><sup>1</sup><br/>H</a> </td>
-        <script>   submit.onclick= function() {hello()}       
-            function hello() {                
-                elements = submit.title;
-                if (ggt.value === "elements"){
-                    ggt.value =elements;}
-                else
-                {ggt.value = ggt.value + " " + elements;}
-                return true;} 
-        </script>
         
+        <td><a class="onm-gases" title="hydrogen" id="submit"><sup>1</sup><br/>H</a> </td>
+        <script> submit.onclick = function() { hello(submit) } </script>
+
         <td colspan="16"></td>
         <td><a class="ngases"  title="helium " id ="helium"><sup>2</sup><br/>He</a> </td>
-        <script>   helium.onclick= function() {hello1()}       
-            function hello1() {                
-                elements = helium.title;
-                if (ggt.value === "elements"){
-                    ggt.value =elements;}
-                else
-                {ggt.value = ggt.value + " " + elements;}
-                return true;} 
-        </script>
+        <script>   helium.onclick = function() {hello(helium)} </script>
     </tr>
 
     <tr>
         <td class="info">2</td>
         <td><a class="alkali"  title="lithium " id="lithium"><sup>3</sup><br/>Li</a> </td>
-          <script>   lithium.onclick= function() {hello2()}       
-            function hello2() {                
-                elements = lithium.title;
-                if (ggt.value === "elements"){
-                    ggt.value =elements;}
-                else
-                {ggt.value = ggt.value + " " + elements;}
-                return true;} 
-        </script>
+        <script>   lithium.onclick= function() { hello(lithium) } </script>
+
         <td><a class="alkalie" href="http://www.chemicool.com/elements/beryllium.html" title="beryllium "><sup>4</sup><br/>Be</a> </td>
         <td colspan="10" rowspan="2"> </td>
         <td><a class="metalloid" href="http://www.chemicool.com/elements/boron.html" title="boron "><sup>5</sup><br/>B</a> </td>
@@ -336,27 +314,26 @@
     </tr>
 </table>
 
-<!--
-<br/>
+
 <h2>Periodic Table Key</h2>
 <table border="1" cellpadding="0" cellspacing="0" class="navbar">
-<tr>
-<td><div class="synthetic">X<br/><sub>Synthetic Elements</sub></div></td>
-<td><div class="liquid ">X<br/><sub>Liquids or melt at close to room temp.</sub></div></td>
-<td><div class="solid ">X<br/><sub>Solids</sub></div></td>
-<td><div class="gas ">X<br/><sub>Gases</sub></div></td>
-<td><div class="alkali"><sup>Alkali Metals</sup></div> </td>
-<td><div class="alkalie"><sup>Alkali Earth Metals</sup></div> </td>
-<td><div class="tmetals "><sup>Transition Metals</sup></div> </td>
-<td><div class="ometals"><sup>Other Metals</sup></div> </td>
-<td><div class="metalloid"><sup>Metalloids</sup></div> </td>
-<td><div class="onm"><sup>Other Non Metals</sup></div> </td>
-<td><div class="halogens"><sup>Halogens</sup></div> </td>
-<td><div class="ngases "><sup>Noble Gases</sup></div> </td>
-<td><div class="rare "><sup>Lanthanides <br/>&amp; Actinides</sup></div> </td>
-</tr>
-</table>  
-     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <tr>
+        <td><div class="synthetic">X<br/><sub>Synthetic Elements</sub></div></td>
+        <td><div class="liquid ">X<br/><sub>Liquids or melt at close to room temp.</sub></div></td>
+        <td><div class="solid ">X<br/><sub>Solids</sub></div></td>
+        <td><div class="gas ">X<br/><sub>Gases</sub></div></td>
+        <td><div class="alkali"><sup>Alkali Metals</sup></div> </td>
+        <td><div class="alkalie"><sup>Alkali Earth Metals</sup></div> </td>
+        <td><div class="tmetals "><sup>Transition Metals</sup></div> </td>
+        <td><div class="ometals"><sup>Other Metals</sup></div> </td>
+        <td><div class="metalloid"><sup>Metalloids</sup></div> </td>
+        <td><div class="onm"><sup>Other Non Metals</sup></div> </td>
+        <td><div class="halogens"><sup>Halogens</sup></div> </td>
+        <td><div class="ngases "><sup>Noble Gases</sup></div> </td>
+        <td><div class="rare "><sup>Lanthanides <br/>&amp; Actinides</sup></div> </td>
+    </tr>
+</table>          
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
@@ -389,16 +366,23 @@
    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-<!--    <script src="js/bootstrap.min.js"></script>
-  
             </div>
           </div>
      </div>     -->
-              
-                <input type="button" id="ggt" value="elements" onclick="dawn(this)">
-       <script>
-     function dawn(input){ggt.value =   input.value != 'close' ?  'close' : 'open'}
-     </script>
+
+    <input type="button" id="ggt" value="elements" onclick="dawn(this)">
+
+    <script>
+        function dawn(input) {
+            ggt.value = input.value != 'close' ?  'close' : 'open'
+        }
+
+        function hello(id) {
+            elements = id.title;
+            ggt.value = ggt.value === "elements" ? elements :  ggt.value + " " + elements;
+            return true;
+        } 
+
+    </script>
 </body>
 </html>

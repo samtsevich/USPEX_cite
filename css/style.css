@@ -30,7 +30,7 @@ table.navbar td a, table.navbar td a.he {
 
 table.navbar td a, table.navbar td a.he {
     display: block;
-    font-size: 8pt;
+    font-size: 10pt;
     font-weight: 700;
     height: 35px;
     padding: 3px 5px;
@@ -39,8 +39,8 @@ table.navbar td a, table.navbar td a.he {
     width: 38px;
 }
 
-td .metalloid {
-    background-color: #c79810;
+.ngases {
+    background: #e6e6fa;
 }
 
 table.navbar td a.ngases:link, table.navbar td a.ngases:visited {
@@ -79,3 +79,193 @@ table.navbar td {
     width: 45px;
 }
 
+table.navbar, table.navbar1 {
+    border-collapse: collapse;
+    border-spacing: 1px;
+    line-height: 120%;
+}
+
+.info {
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+}
+
+td .ometals {
+    background-color: #cdeb8b;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    text-decoration: underline;
+    cursor: auto;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+.navbar td a.rare-synthetic:link, .navbar td a.rare-synthetic:visited {
+    background-color: #FCEFF0;
+    border: #0f5782 1px solid;
+    color: #a52a2a;
+}
+
+td .alkali, td .alkalie, td .ometals, td .metalloid, td .halogens, td .tmetals, td .rare, td .ngases, td .onm {
+    border: #0f5782 0 solid;
+    color: #000;
+    display: block;
+    font-size: 10pt;
+    font-weight: 400;
+    height: 35px;
+    padding: 3px 5px;
+    text-align: center;
+    text-decoration: none;
+    width: 60px;
+}
+
+td .liquid, td .solid, td .gas, td .synthetic {
+    background-color: #fff;
+    border: #0f5782 0 solid;
+    display: block;
+    font-size: 10pt;
+    font-weight: 700;
+    height: 35px;
+    padding: 3px 5px;
+    text-align: center;
+    text-decoration: none;
+    width: 68px;
+}
+
+.navbar td a.ometals-liquid:link, .navbar td a.ometals-liquid:visited {
+    background-color: #cdeb8b;
+    border: #0f5782 1px solid;
+    color: #00f;
+}
+
+table.navbar td a.onm:link, table.navbar td a.onm:visited {
+    background-color: #f96;
+    border: #0f5782 1px solid;
+    color: #000;
+}
+
+.navbar td a.halogens-gases:link, .navbar td a.halogens-gases:visited {
+    background-color: #ebdca9;
+    border: #0f5782 1px solid;
+    color: green;
+}
+
+.navbar td a.tmetals-liquid:link, .navbar td a.tmetals-liquid:visited {
+    background-color: #FFF28E;
+    border: #0f5782 1px solid;
+    color: #00f;
+}
+
+.navbar td a.alkali-liquid:link, .navbar td a.alkali-liquid:visited {
+    background-color: #dda0dd;
+    border: #0f5782 1px solid;
+    color: #00f;
+}
+
+table.navbar td a, table.navbar td a.he {
+    display: block;
+    font-size: 10pt;
+    font-weight: 700;
+    height: 35px;
+    padding: 3px 5px;
+    text-align: center;
+    text-decoration: none;
+    width: 38px;
+}
+
+.navbar td a.unnamed:link, .navbar td a.unnamed:visited {
+    background-color: #fff;
+    border: #0f5782 1px solid;
+    color: #a52a2a;
+}
+
+.navbar td a.actlan:link, .navbar td a.actlan:visited {
+    background-color: #FCEFF0;
+    border: #0f5782 1px solid;
+    color: #000;
+}
+
+.navbar td a.halogens:link, .navbar td a.halogens:visited {
+    background-color: #ebdca9;
+    border: #0f5782 1px solid;
+    color: #000;
+}
+
+.navbar td a.halogens-liquid:link, .navbar td a.halogens-liquid:visited {
+    background-color: #ebdca9;
+    border: #0f5782 1px solid;
+    color: #00f;
+}
+
+.navbar td a.ometals:link, .navbar td a.ometals:visited {
+    background-color: #cdeb8b;
+    border: #0f5782 1px solid;
+    color: #000;
+}
+
+.navbar td a.metalloid:link, .navbar td a.metalloid:visited {
+    background-color: #c79810;
+    border: #0f5782 1px solid;
+    color: #000;
+}
+
+td .alkali {
+    background-color: #dda0dd;
+}
+
+td .ometals {
+    background-color: #cdeb8b;
+}
+
+td .liquid {
+    color: #00f;
+}
+
+td .tmetals {
+    background-color: #FFF28E;
+}
+
+td .synthetic {
+    color: #a52a2a;
+}
+
+td .metalloid {
+    background-color: #c79810;
+}
+
+td .gas {
+    color: #006400;
+}
+
+td .alkalie {
+    background-color: #90c7ff;
+}
+
+td .onm {   /*other no-metals*/
+    background-color: #f96;
+}
+
+td .halogens {
+    background-color: #ebdca9;
+}
+
+td .rare {
+    background-color: #FCEFF0;
+}
+
+
+
+/*.alkali, .alkalie, .onm, .ometals, .tmetals, .rare, .ngases, .metalloid, .halogens, .unnamed {
+    float: left;
+    width: 54px;
+    padding: 5px;
+    border-right: 254px solid #f5f5f5;
+}*/
