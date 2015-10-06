@@ -16,31 +16,11 @@ table.navbar td a, table.navbar td a.he {
     width: 38px;
 }
 
-.navbar td a.tmetals:link, .navbar td a.tmetals:visited {
-    background-color: #FFF28E;
+table.navbar td a.onm-gases, table.navbar td a.onm-gases {
+/*table.navbar td a.onm-gases:link, table.navbar td a.onm-gases:visited {
+*/    background-color: #f96;
     border: #0f5782 1px solid;
-    color: #000;
-}
-
-.navbar td a.alkalie:link, .navbar td a.alkalie:visited {
-    background-color: #90c7ff;
-    border: #0f5782 1px solid;
-    color: #000;
-}
-
-table.navbar td a, table.navbar td a.he {
-    display: block;
-    font-size: 10pt;
-    font-weight: 700;
-    height: 35px;
-    padding: 3px 5px;
-    text-align: center;
-    text-decoration: none;
-    width: 38px;
-}
-
-.ngases {
-    background: #e6e6fa;
+    color: green;
 }
 
 table.navbar td a.ngases:link, table.navbar td a.ngases:visited {
@@ -49,10 +29,22 @@ table.navbar td a.ngases:link, table.navbar td a.ngases:visited {
     color: green;
 }
 
-table.navbar td a.onm-gases:link, table.navbar td a.onm-gases:visited {
-    background-color: #f96;
+table.navbar td a.ngases:link, table.navbar td a.ngases:visited {
+    background-color: #e6e6fa;
     border: #0f5782 1px solid;
     color: green;
+}
+
+table.navbar td {
+    border: 1px solid #FFF;
+    height: 40px;
+    width: 45px;
+}
+
+table.navbar td a.onm:link, table.navbar td a.onm:visited {
+    background-color: #f96;
+    border: #0f5782 1px solid;
+    color: #000;
 }
 
 .navbar td a.rare:link, .navbar td a.rare:visited {
@@ -73,12 +65,6 @@ table.navbar td a.onm-gases:link, table.navbar td a.onm-gases:visited {
     color: #a52a2a;
 }
 
-table.navbar td {
-    border: 1px solid #FFF;
-    height: 40px;
-    width: 45px;
-}
-
 table.navbar, table.navbar1 {
     border-collapse: collapse;
     border-spacing: 1px;
@@ -90,6 +76,11 @@ table.navbar, table.navbar1 {
     color: #333;
     text-align: center;
 }
+
+td .ngases {
+    background: #e6e6fa;
+}
+
 
 td .ometals {
     background-color: #cdeb8b;
@@ -146,12 +137,6 @@ td .liquid, td .solid, td .gas, td .synthetic {
     color: #00f;
 }
 
-table.navbar td a.onm:link, table.navbar td a.onm:visited {
-    background-color: #f96;
-    border: #0f5782 1px solid;
-    color: #000;
-}
-
 .navbar td a.halogens-gases:link, .navbar td a.halogens-gases:visited {
     background-color: #ebdca9;
     border: #0f5782 1px solid;
@@ -168,17 +153,6 @@ table.navbar td a.onm:link, table.navbar td a.onm:visited {
     background-color: #dda0dd;
     border: #0f5782 1px solid;
     color: #00f;
-}
-
-table.navbar td a, table.navbar td a.he {
-    display: block;
-    font-size: 10pt;
-    font-weight: 700;
-    height: 35px;
-    padding: 3px 5px;
-    text-align: center;
-    text-decoration: none;
-    width: 38px;
 }
 
 .navbar td a.unnamed:link, .navbar td a.unnamed:visited {
@@ -213,6 +187,18 @@ table.navbar td a, table.navbar td a.he {
 
 .navbar td a.metalloid:link, .navbar td a.metalloid:visited {
     background-color: #c79810;
+    border: #0f5782 1px solid;
+    color: #000;
+}
+
+.navbar td a.tmetals:link, .navbar td a.tmetals:visited {
+    background-color: #FFF28E;
+    border: #0f5782 1px solid;
+    color: #000;
+}
+
+.navbar td a.alkalie:link, .navbar td a.alkalie:visited {
+    background-color: #90c7ff;
     border: #0f5782 1px solid;
     color: #000;
 }
@@ -260,8 +246,6 @@ td .halogens {
 td .rare {
     background-color: #FCEFF0;
 }
-
-
 
 /*.alkali, .alkalie, .onm, .ometals, .tmetals, .rare, .ngases, .metalloid, .halogens, .unnamed {
     float: left;

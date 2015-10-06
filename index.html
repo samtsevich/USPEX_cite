@@ -148,8 +148,10 @@
                 <tr>
                     <td class="info">Period<br/>1</td>
 
-                    <td><a class="onm-gases" title="hydrogen" id="submit"><sup>1</sup><br/>H</a> </td>
-                    <script> submit.onclick = function() { hello(submit) } </script>
+<!--                     <td><a class="onm-gases" href="http://www.chemicool.com/elements/hydrogen.html" title="hydrogen "><sup>1</sup><br/>H</a> </td>
+ -->
+                    <td><a class="onm-gases" title="hydrogen " id="hydrogen"><sup>1</sup><br/>H</a> </td>
+                    <script> hydrogen.onclick = function() { hello(hydrogen) } </script>
 
                     <td colspan="16"></td>
                     <td><a class="ngases"  title="helium " id ="helium"><sup>2</sup><br/>He</a> </td>
@@ -159,7 +161,7 @@
                 <tr>
                     <td class="info">2</td>
                     <td><a class="alkali"  title="lithium " id="lithium"><sup>3</sup><br/>Li</a> </td>
-                    <script>   lithium.onclick= function() { hello(lithium) } </script>
+                    <script>   lithium.onclick = function() { hello(lithium) } </script>
 
                     <td><a class="alkalie" href="http://www.chemicool.com/elements/beryllium.html" title="beryllium "><sup>4</sup><br/>Be</a> </td>
                     <td colspan="10" rowspan="2"> </td>
@@ -322,19 +324,19 @@
             <h2>Periodic Table Key</h2>
             <table border="1" cellpadding="0" cellspacing="0" class="navbar">
                 <tr>
-                    <td><div class="synthetic">X<br/><sub>Synthetic Elements</sub></div></td>
-                    <td><div class="liquid ">X<br/><sub>Liquids or melt at close to room temp.</sub></div></td>
-                    <td><div class="solid ">X<br/><sub>Solids</sub></div></td>
-                    <td><div class="gas ">X<br/><sub>Gases</sub></div></td>
-                    <td><div class="alkali"><sup>Alkali Metals</sup></div> </td>
-                    <td><div class="alkalie"><sup>Alkali Earth Metals</sup></div> </td>
-                    <td><div class="tmetals "><sup>Transition Metals</sup></div> </td>
-                    <td><div class="ometals"><sup>Other Metals</sup></div> </td>
-                    <td><div class="metalloid"><sup>Metalloids</sup></div> </td>
-                    <td><div class="onm"><sup>Other Non Metals</sup></div> </td>
-                    <td><div class="halogens"><sup>Halogens</sup></div> </td>
-                    <td><div class="ngases "><sup>Noble Gases</sup></div> </td>
-                    <td><div class="rare "><sup>Lanthanides <br/>&amp; Actinides</sup></div> </td>
+                    <td> <div class="synthetic">X<br/> <sub> Synthetic Elements </sub> </div> </td>
+                    <td> <div class="liquid ">X<br/> <sub> Liquids or melt at close to room temp. </sub> </div> </td>
+                    <td> <div class="solid ">X<br/> <sub> Solids </sub> </div> </td>
+                    <td> <div class="gas ">X<br/> <sub> Gases </sub> </div> </td>
+                    <td> <div class="alkali"> <sup> Alkali Metals </sup> </div> </td>
+                    <td> <div class="alkalie"> <sup> Alkali Earth Metals </sup></div> </td>
+                    <td> <div class="tmetals "> <sup> Transition Metals </sup></div> </td>
+                    <td> <div class="ometals"> <sup> Other Metals </sup> </div> </td>
+                    <td> <div class="metalloid"> <sup> Metalloids </sup> </div> </td>
+                    <td> <div class="onm"> <sup> Other Non Metals </sup> </div> </td>
+                    <td> <div class="halogens"> <sup> Halogens </sup> </div> </td>
+                    <td> <div class="ngases "> <sup> Noble Gases </sup> </div> </td>
+                    <td> <div class="rare "> <sup> Lanthanides <br/>&amp; Actinides </sup> </div> </td>
                 </tr>
             </table>
 
@@ -342,24 +344,64 @@
             <!-- Include all compiled plugins (below), or include individual files as needed -->
             <script src="js/bootstrap.min.js"></script>
 
+            <script type='text/javascript' src='js/superfish.js?ver=1.4.8'></script>
+            <script type='text/javascript' src='js/superfish.args.js?ver=1.8.1'></script>
+
             </div>
         </div>
     </div>
 
 
-    <input type="button" id="ggt" value="elements" onclick="dawn(this)">
+    <div>
+        <input type="button" id="ggt" value="elements" onclick="dawn(this)">
+        <p id="setOfElements"> This is some text. </p>
+    </div>>
 
     <script>
+        var input_elem = {}
+        var entalpy;
+        entalpy.minValue = 0
+        entalpy.maxValue = 4
+
+
+        console.log(entalpy.minValue + "      " + entalpy.maxValue)
         function dawn(input) {
             ggt.value = input.value != 'close' ?  'close' : 'open'
         }
 
         function hello(id) {
-            elements = id.title;
-            ggt.value = ggt.value === "elements" ? elements :  ggt.value + " " + elements;
-            return true;
-        } 
+            // id.addEventListener("mouseover", myFunction);
+            x = document.getElementById("setOfElements");
+            add_element(input_elem, id);
+            x.innerHTML = updadeSetOfElements(id);
 
+            elements = id.title;
+            ggt.value = elements;
+            return true;
+        }
+
+        function updadeSetOfElements(id) {
+            text = ""
+
+            for (i in input_elem) {
+                text += i + "  ";
+            }
+
+            return text;
+        }
+
+        function add_element(input ,id) {
+            if (id.title in input) {
+                delete input[id.title]
+            } else {
+                input[id.title] = true
+            }
+        }
+
+        document.write(input_elem);
     </script>
+
+
+
 </body>
 </html>
