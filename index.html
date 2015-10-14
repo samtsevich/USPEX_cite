@@ -355,7 +355,7 @@
     <div>
         <input type="button" id="ggt" value="elements" onclick="dawn(this)">
         <p id="setOfElements"> This is some text. </p>
-    </div>>
+    </div>
 
     <script>
         var input_elem = {}
@@ -400,6 +400,89 @@
 
         document.write(input_elem);
     </script>
+
+
+
+    <div>
+        <script>
+            activeP = ''
+            propertyList = []
+            min_p = []
+            max_p = []
+            $(function() {
+                /* выбор города */
+                $('.delivery_list').click(function() {
+                    $(".cities_list").slideToggle('fast');
+                });
+
+                $('ul.cities_list li').click(function() {
+                    var tx = $(this).html();
+                    var tv = $(this).attr('alt');
+                    $(".cities_list").slideUp('fast');
+                    $(".delivery_list span").html(tx);
+                    $(".delivery_text").html(tv);
+                });
+            })
+        </script>
+    </div>
+
+    <div class="delivery_block">
+        <div class="delivery_list">
+            <div id="btn"> </div>
+            <span>Property</span>
+        </div>
+
+        <ul class="cities_list">
+            <li alt="тут можно чтото написать" onclick="SetFlag(this)">Durable</li>
+
+            <li alt="" onclick="SetFlag(this)">Density</li>
+                <!--  <input id="minDens" type="text" size="10">
+                  <input id="maxDens" type="text" size="10">-->
+
+        </ul>
+
+        Min  <input id="minOfPr" type="text" size="10"  >
+        Max  <input id="maxOfPr" type="text"  size="10" >
+        <input type="button" id="ggt" value="SAVE" onclick="saveclick(document.getElementById('minOfPr').value, document.getElementById('maxOfPr').value)">
+        <p id="savedPr" > </p>
+
+        <script>
+            function saveclick(min, max) {
+                i = IsExist(activeP)
+                propertyList[i] = activeP
+                min_p[i] = min
+                max_p[i] = max
+                ShowProp()
+            }
+
+            function ShowProp() {
+                stringa = ""
+                for (i = 0; i < propertyList.length; i++) {
+                    stringa = stringa + propertyList[i] + "  from " + min_p[i] + " to " + max_p[i] + ";   "
+                }
+                x = document.getElementById("savedPr");
+                x.innerHTML = stringaж
+            }
+
+            function SetFlag(input) {
+                activeP = input.innerHTML
+            }
+
+            function IsExist(input){
+                for (i = 0; i < propertyList.length; i++) {
+                    if (propertyList[i] === input) {
+                        delete propertyList[i]
+                        return i
+                        close
+                    }
+                }
+                return i
+            }
+        </script>
+
+        <div class="delivery_text">choose property pls</div>
+    </div>
+
 
 
 

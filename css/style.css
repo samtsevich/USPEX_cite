@@ -71,6 +71,12 @@ table.navbar, table.navbar1 {
     line-height: 120%;
 }
 
+table.navbar td a.ngases:link, table.navbar td a.ngases:visited {
+    background-color: #e6e6fa;
+    border: #0f5782 1px solid;
+    color: green;
+}
+
 .info {
     background-color: #f5f5f5;
     color: #333;
@@ -247,9 +253,77 @@ td .rare {
     background-color: #FCEFF0;
 }
 
+
+/*_____________________________*/
 /*.alkali, .alkalie, .onm, .ometals, .tmetals, .rare, .ngases, .metalloid, .halogens, .unnamed {
     float: left;
     width: 54px;
     padding: 5px;
     border-right: 254px solid #f5f5f5;
 }*/
+
+
+
+
+.delivery_block{
+    width: 270px;
+    padding: 24px 0 0;
+    color: #8c8c8c;
+    font-size: 11px;
+}
+
+.delivery_block .delivery_list {
+    padding: 3px 6px 0 6px;
+    height: 22px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0 20px 0 0;
+    color: #ed4226;
+    border: 1px solid #efefef;
+
+    width: 237px;
+    z-index: 11;
+    background: #fcfcfc;
+}
+
+.delivery_list #btn {
+    background: url(../images/dropdown.png);
+    width: 17px;
+    height: 18px;
+    float: right;
+}
+
+.delivery_list span {
+    padding: 2px 0 0 2px;
+    display: block;
+    font-weight: bold;
+}
+
+.delivery_block ul.cities_list {
+    margin-top: 0px;
+    z-index: 10;
+    background: #fcfcfc;
+    position: absolute;
+    border-radius: 3px;
+    width: 249px;
+    padding: 0;
+    border: 1px solid #eee;
+    display: none;
+}
+
+ul.cities_list li {
+    padding: 6px 9px;
+    list-style-type: none;
+    border-top: 1px solid #efefef;
+}
+
+ul.cities_list li:hover {
+    cursor: pointer;
+    background: #fff;
+}
+
+.delivery_block .delivery_text {
+    padding: 3px 5px;
+    margin: 5px 0 0 3px;
+}
+
