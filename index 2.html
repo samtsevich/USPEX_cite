@@ -1,0 +1,124 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+
+
+<div>
+    <script type="text/javascript">
+        var compounds = [
+            {id: 1, energy: 1, bool: true},
+            {id: 2, energy: 8, bool: true},
+            {id: 3, energy: 27, bool: true},
+            {id: 4, energy: 64, bool: true}
+        ];
+
+        console.log(compounds.length);
+
+
+        var arr = [];
+        var len = compounds.results.length;
+        for (var i = 0; i < len; i++) {
+            arr.push({
+                key: compounds.results[i].label,
+                energy: compounds.results[i].energy,
+                bool: compounds.results[i].bool
+            });
+            console.log(compounds.results[i].label + "\t\t" +
+                        compounds.results[i].energy + "\t" +
+                        compounds.results[i].bool + "\n");
+        }
+
+
+    </script>>
+</div>>
+
+
+
+
+<script>
+    activeP=''
+    propertyList=[]
+    min_p = []
+    max_p = []
+    $(function(){
+/* выбор города */
+        $('.delivery_list').click(function(){
+            $(".cities_list").slideToggle('fast');
+        });
+        $('ul.cities_list li').click(function(){
+    var tx = $(this).html();
+    var tv = $(this).attr('alt');
+    $(".cities_list").slideUp('fast');
+    $(".delivery_list span").html(tx);
+    $(".delivery_text").html(tv);
+    });
+})
+</script>
+</head>
+<body>
+<div class="delivery_block">
+        <div class="delivery_list"><div id="btn"> </div><span>Property</span></div>
+
+        <ul class="cities_list">
+            <li alt="тут можно чтото написать" onclick="SetFlag(this)">Durable</li>
+                  
+            <li alt="" onclick="SetFlag(this)">Density</li>
+                <!--  <input id="minDens" type="text" size="10">
+                  <input id="maxDens" type="text" size="10">-->
+
+        </ul>
+                Min  <input id="minOfPr" type="text" size="10"  >
+                Max  <input id="maxOfPr" type="text"  size="10" >
+                <input type="button" id="ggt" value="SAVE" onclick="saveclick(document.getElementById('minOfPr').value,document.getElementById('maxOfPr').value)">
+                <p id="savedPr" > </p>
+                
+        
+         
+    
+  
+ <script>
+        function saveclick(min,max) {
+            i=IsExist(activeP)
+            propertyList[i]= activeP
+            min_p[i] = min
+            max_p[i] = max
+            ShowProp()
+        }
+        
+     
+     
+        function ShowProp() {
+            stringa=""
+            for ( i=0; i<propertyList.length;i++)   {stringa=stringa + propertyList[i]+"  from "+min_p[i]+" to "+max_p[i]+  ";   "}
+            x = document.getElementById("savedPr");
+            x.innerHTML=stringa
+        } 
+        
+     
+        function SetFlag(input) {
+            activeP = input.innerHTML
+        }
+     
+         
+        function IsExist(input){
+            for ( i=0; i<propertyList.length;i++)   {
+                if (propertyList[i] === input) {
+                    delete propertyList[i]
+                    return i
+                    close
+                }
+                
+            }
+            return i
+        }
+    </script>  
+
+        <div class="delivery_text">choose property pls</div>
+</div>
+
+
+</body>
+</html>
