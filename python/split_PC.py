@@ -48,7 +48,6 @@ def SplitPoscars(POSCAR_dir):
         if "EA" in line:
             count1 = 0
             fwritePOSCAR.close()
-            count += 1
             hash1.update(str(count))
             lineHash = str(hash1.hexdigest())
             fwritePOSCAR = open("./../out/" + lineHash, 'w')
@@ -59,11 +58,12 @@ def SplitPoscars(POSCAR_dir):
             lineEnergy = readEnergy(Enread.readline())
             lineHardeness = Harread.readline()
  
-            fwriteTable.write ("{ id:    " + lineHash + "   density: " + lineDensity.rstrip() + " hardness:  " + lineHardeness.rstrip() + " energy: " + lineEnergy.rstrip())   
+            fwriteTable.write ( "{ id :    \"" + lineHash + "\" , density  :  " + lineDensity.rstrip() + ", hardness :  " + lineHardeness.rstrip() + ", energy: " + lineEnergy.rstrip())   
             # fwriteTable.write(lineHash + "\t\t" + str(count) + "\n")
+            count += 1
         else:
             if count1 == 5:
-                fwriteTable.write("  atomTypes: " + str(list(set(line.split()))) + "}\n")
+                fwriteTable.write(" , atomTypes : " + str(list(set(line.split()))) + "},\n")
             fwritePOSCAR.write(line)
 
 
